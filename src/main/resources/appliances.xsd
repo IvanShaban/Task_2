@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ovens" type="ovensType"/>
+  <xs:element name="laptops" type="laptopsType"/>
+  <xs:element name="refrigerators" type="refrigeratorsType"/>
+  <xs:element name="vacuumCleaners" type="vacuumCleanersType"/>
+  <xs:element name="tabletPCs" type="tabletPCsType"/>
+  <xs:element name="speakersgorup" type="speakersgorupType"/>
+  <xs:complexType name="ovenType">
+    <xs:sequence>
+      <xs:element name="price">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="100.0"/>
+            <xs:enumeration value="200.0"/>
+            <xs:enumeration value="300.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="power_consumption">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="1000.0"/>
+            <xs:enumeration value="1500.0"/>
+            <xs:enumeration value="2000.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="weight">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="10.0"/>
+            <xs:enumeration value="12.0"/>
+            <xs:enumeration value="11.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="capacity">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="32.0"/>
+            <xs:enumeration value="33.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="depth"/>
+      <xs:element name="height">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="45.5"/>
+            <xs:enumeration value="45.0"/>
+            <xs:enumeration value="40.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="width">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="59.5"/>
+            <xs:enumeration value="60.0"/>
+            <xs:enumeration value="70.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ovensType">
+    <xs:sequence>
+      <xs:element type="ovenType" name="oven" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="laptopType">
+    <xs:sequence>
+      <xs:element name="price">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="750.0"/>
+            <xs:enumeration value="1000.0"/>
+            <xs:enumeration value="2000.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="battery_capacity">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="100.0"/>
+            <xs:enumeration value="2000.0"/>
+            <xs:enumeration value="4000.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="os">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="WINDOWS"/>
+            <xs:enumeration value="MACOS"/>
+            <xs:enumeration value="LINUX"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="memory_rom">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="4000.0"/>
+            <xs:enumeration value="16000.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="cpu">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="AMD_RYZEN_9_5900X"/>
+            <xs:enumeration value="INTEL_CORE_I5_11600K"/>
+            <xs:enumeration value="AMD_RYZEN_5_5600X"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="display_inches">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="15.5"/>
+            <xs:enumeration value="13.6"/>
+            <xs:enumeration value="17.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="laptopsType">
+    <xs:sequence>
+      <xs:element type="laptopType" name="laptop" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="refrigeratorType">
+    <xs:sequence>
+      <xs:element name="price">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="1000.0"/>
+            <xs:enumeration value="1400.0"/>
+            <xs:enumeration value="1300.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="power_consumption">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="100.0"/>
+            <xs:enumeration value="150.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="weight">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="20.0"/>
+            <xs:enumeration value="25.0"/>
+            <xs:enumeration value="40.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="freezer_capacity">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="10.0"/>
+            <xs:enumeration value="20.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="overall_capacity">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="300.0"/>
+            <xs:enumeration value="350.0"/>
+            <xs:enumeration value="400.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="height">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="200.0"/>
+            <xs:enumeration value="150.0"/>
+            <xs:enumeration value="300.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="width">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="70.0"/>
+            <xs:enumeration value="50.0"/>
+            <xs:enumeration value="150.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="refrigeratorsType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="refrigeratorType" name="refrigerator"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="vacuumCleanerType">
+    <xs:sequence>
+      <xs:element name="price">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="1300.0"/>
+            <xs:enumeration value="1000.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="power_consumption">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="100.0"/>
+            <xs:enumeration value="150.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="filter_type">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="A"/>
+            <xs:enumeration value="B"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="bag_type">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="A1"/>
+            <xs:enumeration value="B1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="wand_type">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="ALL_IN_ONE"/>
+            <xs:enumeration value="LONG"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="motor_speed_regulation">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="3000.0"/>
+            <xs:enumeration value="2500.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="cleaning_width">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="20.0"/>
+            <xs:enumeration value="30.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="vacuumCleanersType">
+    <xs:sequence>
+      <xs:element type="vacuumCleanerType" name="vacuumCleaner" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tabletPCType">
+    <xs:sequence>
+      <xs:element name="price">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="1000.0"/>
+            <xs:enumeration value="2000.0"/>
+            <xs:enumeration value="1600.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="battery_capacity">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="400.0"/>
+            <xs:enumeration value="300.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="display_inches">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="10.0"/>
+            <xs:enumeration value="13.0"/>
+            <xs:enumeration value="15.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="memory_rom">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="8000.0"/>
+            <xs:enumeration value="9000.0"/>
+            <xs:enumeration value="12000.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="flash_memory_capacity">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="2.0"/>
+            <xs:enumeration value="4.0"/>
+            <xs:enumeration value="6.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="color">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="GREEN"/>
+            <xs:enumeration value="RED"/>
+            <xs:enumeration value="BLUE"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tabletPCsType">
+    <xs:sequence>
+      <xs:element type="tabletPCType" name="tabletPC" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="speakersType">
+    <xs:sequence>
+      <xs:element name="price">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="300.0"/>
+            <xs:enumeration value="400.0"/>
+            <xs:enumeration value="350.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="power_consumption">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="15.0"/>
+            <xs:enumeration value="16.0"/>
+            <xs:enumeration value="17.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="number_of_speakers">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="cord_length">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="2.0"/>
+            <xs:enumeration value="3.0"/>
+            <xs:enumeration value="4.0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="speakersgorupType">
+    <xs:sequence>
+      <xs:element type="speakersType" name="speakers" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
