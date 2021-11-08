@@ -47,13 +47,15 @@ public class SaxParserHandler extends DefaultHandler {
             return;
         }
         if (qName.equalsIgnoreCase(parentTagName)) {
-            needToChangeParentTag = true;
-            applianceMatchesCriteria = true;
             if (currentAppliance != null) {
-                Appliance appliance = currentAppliance;
-                result.add(appliance);
+                if (applianceMatchesCriteria) {
+                    Appliance appliance = currentAppliance;
+                    result.add(appliance);
+                }
                 currentAppliance = null;
             }
+            applianceMatchesCriteria = true;
+            needToChangeParentTag = true;
         }
     }
 
